@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "Q1WebAPI.Controllers.BookController",
+    "Method": "GetListAllowance",
+    "RelativePath": "Book/getList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
