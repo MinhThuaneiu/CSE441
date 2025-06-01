@@ -11,6 +11,7 @@ import CustomerScreen from "../screen/customer";
 import AddCustomer from "../screen/addCustomer";
 import Transaction from "../screen/transaction";
 import TransactionDetail from "../screen/TransactionDetail";
+import Settings from "../screen/Setting";    
 
 
 const Stack = createNativeStackNavigator();
@@ -72,6 +73,20 @@ const CustomerNavigator = ({ navigation }) => {
         </Stack.Navigator>
     )
 }
+const SettingNavigator =({navigation}) =>{
+    return(
+        <Stack.Navigator screenOptions={({route})=>({
+            headerStyle:{
+                backgroundColor: "#E64E6A",
+            },
+            headerTintColor: "white",
+            
+        })}>
+            <Stack.Screen name="Settings" component={Settings}/>
+            <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
+        </Stack.Navigator>
+    )
+}
 
 
 const MainNavigation = ({ navigation }) => {
@@ -116,7 +131,7 @@ const MainNavigation = ({ navigation }) => {
             <Tab.Screen name="Home" component={ServiceNavigator} options={{ headerShown: false }} />
             <Tab.Screen name="Transaction" component={TransNavigator} />
             <Tab.Screen name="Customer" component={CustomerNavigator} options={{ headerShown: false }} />
-            <Tab.Screen name="Settings" component={ServiceNavigator} options={{ headerShown: false }} />
+            <Tab.Screen name="Settings" component={SettingNavigator} options={{ headerShown: false }} />
         </Tab.Navigator>
     )
 }
